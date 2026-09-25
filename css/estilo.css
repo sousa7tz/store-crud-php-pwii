@@ -6,7 +6,9 @@
 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background:
+        radial-gradient(circle at top, rgba(255, 75, 75, 0.2), transparent 22%),
+        linear-gradient(135deg, #050505 0%, #12080a 40%, #1a0d10 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -20,26 +22,29 @@ body {
 }
 
 form {
-    background: #ffffff;
-    border-radius: 16px;
+    background: rgba(18, 18, 20, 0.96);
+    border: 1px solid rgba(255, 92, 92, 0.18);
+    border-radius: 18px;
     padding: 40px 32px;
     display: flex;
     flex-direction: column;
     gap: 6px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.42);
 }
 
 h1 {
     font-size: 1.6rem;
-    color: #222;
+    color: #f2f2f2;
     margin-bottom: 24px;
     text-align: center;
-    font-weight: 700;
+    font-weight: 800;
+    letter-spacing: 0.04em;
 }
 
 label {
     font-size: 0.9rem;
     font-weight: 600;
-    color: #444;
+    color: #e5e5e5;
     margin-top: 14px;
     margin-bottom: 6px;
 }
@@ -48,11 +53,11 @@ input[type="text"],
 textarea {
     width: 100%;
     padding: 12px 14px;
-    border: 1px solid #d9d9e3;
+    border: 1px solid rgba(255, 94, 94, 0.25);
     border-radius: 10px;
     font-size: 0.95rem;
-    color: #222;
-    background: #f9f9fc;
+    color: #f6f6f6;
+    background: rgba(28, 28, 31, 0.9);
     transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
     resize: vertical;
 }
@@ -64,25 +69,25 @@ textarea {
 input[type="text"]:focus,
 textarea:focus {
     outline: none;
-    border-color: #6a11cb;
-    background: #fff;
-    box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.15);
+    border-color: #ff6a6a;
+    background: rgba(18, 18, 20, 1);
+    box-shadow: 0 0 0 3px rgba(255, 90, 90, 0.18);
 }
 
 /* Sombra padrão reaproveitada nos campos */
 .sombra {
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
 }
 
 /* Input de arquivo customizado */
 .meuInput {
     padding: 10px;
-    border: 2px dashed #c3c3d6;
+    border: 2px dashed rgba(255, 90, 90, 0.32);
     border-radius: 10px;
-    background: #f9f9fc;
+    background: rgba(28, 28, 31, 0.8);
     cursor: pointer;
     font-size: 0.9rem;
-    color: #555;
+    color: #e8e8e8;
 }
 
 .meuInput::file-selector-button {
@@ -90,15 +95,15 @@ textarea:focus {
     margin-right: 12px;
     border: none;
     border-radius: 8px;
-    background: #6a11cb;
+    background: linear-gradient(135deg, #ff4d4d, #b51212);
     color: #fff;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
-    transition: background 0.2s ease;
+    transition: filter 0.2s ease, transform 0.2s ease;
 }
 
 .meuInput::file-selector-button:hover {
-    background: #560fa8;
+    filter: brightness(1.08);
 }
 
 /* Botão de envio */
@@ -107,17 +112,19 @@ textarea:focus {
     padding: 13px;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background: linear-gradient(135deg, #ff4d4d, #b51212);
     color: #fff;
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 800;
     cursor: pointer;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.2s ease;
+    box-shadow: 0 8px 18px rgba(181, 18, 18, 0.35);
 }
 
 #botao:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(37, 117, 252, 0.35);
+    box-shadow: 0 10px 22px rgba(255, 74, 74, 0.35);
+    filter: brightness(1.04);
 }
 
 #botao:active {
@@ -129,17 +136,18 @@ form > a {
     display: block;
     text-align: center;
     margin-top: 18px;
-    color: #6a11cb;
+    color: #ff7575;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.9rem;
     padding: 8px;
     border-radius: 8px;
-    transition: background 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
 form > a:hover {
-    background: #f3f0ff;
+    background: rgba(255, 92, 92, 0.09);
+    color: #ff8b8b;
 }
 
 /* Responsivo */

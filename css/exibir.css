@@ -6,58 +6,67 @@
 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background:
+        radial-gradient(circle at top, rgba(255, 74, 74, 0.24), transparent 24%),
+        linear-gradient(135deg, #050505 0%, #13090a 35%, #1e0d0f 100%);
     min-height: 100vh;
     padding: 40px 20px;
+    color: #f3f3f3;
 }
 
 section {
     max-width: 800px;
     margin: 0 auto;
-    background: #ffffff;
-    border-radius: 16px;
+    background: rgba(16, 16, 18, 0.95);
+    border: 1px solid rgba(255, 92, 92, 0.2);
+    border-radius: 18px;
     padding: 36px 32px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.42);
 }
 
 .voltar {
     display: inline-block;
     margin-bottom: 24px;
-    color: #6a11cb;
+    color: #ff6c6c;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.9rem;
     padding: 8px 12px;
     border-radius: 8px;
-    transition: background 0.2s ease;
+    background: rgba(255, 92, 92, 0.08);
+    border: 1px solid rgba(255, 92, 92, 0.18);
+    transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .voltar:hover {
-    background: #f3f0ff;
+    background: rgba(255, 92, 92, 0.12);
+    transform: translateX(-2px);
 }
 
 h1 {
     font-size: 1.8rem;
-    color: #222;
+    color: #f8f8f8;
     margin-bottom: 8px;
-    font-weight: 700;
+    font-weight: 800;
+    letter-spacing: 0.02em;
 }
 
 h2 {
     font-size: 1.4rem;
-    color: #2575fc;
+    color: #ff7070;
     margin-bottom: 20px;
     font-weight: 700;
 }
 
 p {
     font-size: 1rem;
-    color: #444;
+    color: #d7d7d7;
     line-height: 1.6;
     margin-bottom: 28px;
 }
 
 p b {
-    color: #222;
+    color: #ffffff;
 }
 
 .galeria {
@@ -70,20 +79,23 @@ p b {
     aspect-ratio: 1 / 1;
     overflow: hidden;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    background: #f9f9fc;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.26);
+    background: linear-gradient(135deg, rgba(255, 92, 92, 0.14), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 92, 92, 0.18);
 }
 
 .caixa_img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
     display: block;
+    filter: saturate(0.95) contrast(1.06);
 }
 
 .caixa_img:hover img {
     transform: scale(1.06);
+    filter: saturate(1.15) contrast(1.1);
 }
 
 /* Responsivo */
